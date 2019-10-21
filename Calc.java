@@ -11,7 +11,7 @@ public class Calc {
 
         if (Character.isDigit(expr.charAt(0))) {
             if (m.find()) {
-                throw new SomethingWentWrong("Введите выражение, состоящее только из арабских или римских цифр");
+                throw new SomethingWentWrong("Введите выражение, состоящее только из двух арабских или римских цифр от 1 до 10 включительно");
             } else {
                 if (expr.startsWith("10")) {
                     num2 = expr.charAt(3);
@@ -37,7 +37,7 @@ public class Calc {
         } else {
             int n1 = 0, n2 = 0;
             if (expr.matches(".*\\d+.*")) {
-                throw new SomethingWentWrong("Введите выражение, состоящее только из арабских или римских цифр");
+                throw new SomethingWentWrong("Введите выражение, состоящее только из двух арабских или римских цифр от 1 до 10 включительно");
             } else {
                 if (expr.length() <= 9) {
                     n1 = RomanianNums.beginning(expr, n1);
