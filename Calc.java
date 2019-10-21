@@ -51,7 +51,7 @@ public class Calc {
         }
     }
 static class CalcMethods {
-    public static int calc(int x, int y, int r, String expr) {  //метод, отвечающий за вычисления
+    public static int calc(int x, int y, int r, String expr) throws SomethingWentWrong {  //метод, отвечающий за вычисления
         if (expr.contains("+")) {
             r = x + y;
         } else if (expr.contains("-")) {
@@ -60,6 +60,9 @@ static class CalcMethods {
             r = x * y;
         } else if (expr.contains("/")) {
             r = x / y;
+        }
+        else{
+            throw new SomethingWentWrong("Введите выражение, состоящее только из двух арабских или римских цифр от 1 до 10 включительно");
         }
         return r;
     }
