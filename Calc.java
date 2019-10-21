@@ -51,7 +51,7 @@ public class Calc {
         }
     }
 static class CalcMethods {
-    public static int calc(int x, int y, int r, String expr) {
+    public static int calc(int x, int y, int r, String expr) {  //метод, отвечающий за вычисления
         if (expr.contains("+")) {
             r = x + y;
         } else if (expr.contains("-")) {
@@ -65,7 +65,7 @@ static class CalcMethods {
     }
 }
 static class EnteringTheString {
-        public static String gettingString() {
+        public static String gettingString() {      //метод, отвечающий за ввод выражения
             System.out.println("Введите выражение");
             Scanner scanner = new Scanner(System.in);
             String str = scanner.nextLine();
@@ -73,8 +73,8 @@ static class EnteringTheString {
         }
 }
 public static class RomanianNums {
-        public static int beginning(String str, int num){
-            if (str.startsWith("VIII")) {
+        public static int beginning(String str, int num){  //метод для работы с римскими цифрами, который обрабатывает
+            if (str.startsWith("VIII")) {                 //начало строки и присваивает значение первой переменной
                 num = 8;
             } else if (str.startsWith("III")) {
                 num = 3;
@@ -97,8 +97,8 @@ public static class RomanianNums {
             }
             return num;
         }
-    public static int ending(String str, int num){
-        if (str.endsWith("VIII")) {
+    public static int ending(String str, int num){  //метод для работы с римскими цифрами, который обрабатывает
+        if (str.endsWith("VIII")) {                 //конец строки и присваивает значение второй переменной
             num = 8;
         } else if (str.endsWith("III")) {
             num = 3;
@@ -123,7 +123,7 @@ public static class RomanianNums {
     }
 }
 }
-class SomethingWentWrong extends Exception {
+class SomethingWentWrong extends Exception {    //класс, отвечающий за правильность данных, введенных пользователем
 
     public SomethingWentWrong(String message) {
         super(message);
